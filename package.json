@@ -1,0 +1,22 @@
+{
+  "name": "adminbuilt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DJTouchette/adminBuilt.git"
+  },
+  "author": "Damien Touchette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DJTouchette/adminBuilt/issues"
+  },
+  "homepage": "https://github.com/DJTouchette/adminBuilt#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
