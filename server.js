@@ -15,8 +15,8 @@ const outputPath = path.resolve(process.cwd(), 'build');
   app.use(publicPath, express.static(outputPath));
 
   app.get('/', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
-  app.get('/45.60ec5b75f07a1656e681.chunk.js', => res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js')));
-  
+  app.get('/45.60ec5b75f07a1656e681.chunk.js', (req, res) => res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js')));
+
   const port = 62102;
 
   app.listen(port, (err) => {
