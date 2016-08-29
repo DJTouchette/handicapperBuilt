@@ -5,8 +5,8 @@ const compression = require('compression');
 
 // Production middlewares
 const publicPath = '/';
-// const outputPath = path.resolve(process.cwd(), 'build');
-const outputPath = path.resolve(process.cwd());
+const outputPath = path.resolve(process.cwd(), 'build');
+// const outputPath = path.resolve(process.cwd());
 
   // compression middleware compresses your server responses which makes them
   // smaller (applies also to assets). You can read more about that technique
