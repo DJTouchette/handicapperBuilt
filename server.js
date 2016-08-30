@@ -15,7 +15,7 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   // smaller (applies also to assets). You can read more about that technique
   // and other good practices on official Express.js docs http://mxs.is/googmy
   app.use(compression());
-  app.use(publicPath, express.static(productionOutput));
+  app.use(publicPath, express.static(outputPath));
 
   app.get('*', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
   app.get('/main.ce8ca11f34f701ba0079.js', (req, res) => res.sendFile(path.resolve(outputPath, 'main.ce8ca11f34f701ba0079.js')));
