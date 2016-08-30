@@ -18,10 +18,10 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.use(publicPath, express.static(outputPath));
 
   app.get('/admin/', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
-  app.get('/admin/build/*', (req, res) => {res.sendFile(path.resolve(outputPath))});
-  // app.get('/admin/build/vendor.*.js', (req, res) => {res.sendFile(path.resolve(outputPath, 'vendor.ffc794352051bdfc501c.js'))});
-  // app.get('/admin/build/main.*.css', (req, res) => {res.sendFile(path.resolve(outputPath, 'main.d84f944b166f9128a9bac6169e27aab1.css'))});
-  // app.get('/admin/build45.60ec5b75f07a1656e681.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js'))});
+  app.get('/admin/build/main.*.js', (req, res) => {res.sendFile(path.resolve(outputPath, 'main.7e604d806c347d0050f1.js'))});
+  app.get('/admin/build/vendor.*.js', (req, res) => {res.sendFile(path.resolve(outputPath, 'build/vendor.4338e5b794c25e63f6cb.js'))});
+  app.get('/admin/build/main.*.css', (req, res) => {res.sendFile(path.resolve(outputPath, 'main.d84f944b166f9128a9bac6169e27aab1.css'))});
+  app.get('/admin/build/45.60ec5b75f07a1656e681.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, 'main.d84f944b166f9128a9bac6169e27aab1.css'))});
   const port = 62102;
 
   app.listen(port, (err) => {
@@ -31,5 +31,4 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
     console.log(`listening on port ${port}`);
     console.log(outputPath);
     console.log(productionOutput);
-    console.log(path.resolve(outputPath, 'main.41f0d908d2ed1f2b550c.js'));
   });
