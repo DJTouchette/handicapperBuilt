@@ -22,6 +22,7 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.get('/admin/build/vendor.*.js', (req, res) => {res.sendFile(path.resolve(outputPath, 'vendor.4338e5b794c25e63f6cb.js'))});
   app.get('/admin/build/main.*.css', (req, res) => {res.sendFile(path.resolve(outputPath, 'main.d84f944b166f9128a9bac6169e27aab1.css'))});
   app.get('/admin/build/45.60ec5b75f07a1656e681.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js'))});
+  app.get('/admin/appcache/manifest.html', (req, res) => {res.sendFile(path.resolve(outputPath, '/appcache/manifest.html'))});
   const port = 62102;
 
   app.listen(port, (err) => {
