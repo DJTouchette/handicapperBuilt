@@ -30,6 +30,7 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.get('admin/:file', (req, res, next) =>  {
     let file = req.params.file;
     console.log(file);
+    console.log('heeellllooooo');
     res.sendFile(path.resolve(outputPath, file));
   });
   // app.get('/admin/appcache/manifest.html', (req, res) => {res.send('hello')});
