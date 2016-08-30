@@ -7,8 +7,9 @@ const compression = require('compression');
 // Production middlewares
 const publicPath = '/';
 const outputPath = path.resolve(process.cwd(), 'build');
-const productionOutput = 'http://thesportsmatrix.com/admin/';
-// const outputPath = path.resolve(process.cwd());
+// const productionOutput = 'http://thesportsmatrix.com/admin/';
+const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/build/';
+
 
   // compression middleware compresses your server responses which makes them
   // smaller (applies also to assets). You can read more about that technique
@@ -27,5 +28,4 @@ const productionOutput = 'http://thesportsmatrix.com/admin/';
     }
     console.log(`listening on port ${port}`);
     console.log(outputPath);
-    console.log(serveFrom);
   });
