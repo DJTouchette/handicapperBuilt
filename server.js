@@ -25,8 +25,13 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.get('/admin/appcache/manifest.html', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.html'))});
   app.get('/admin/appcache/manifest.appcache', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.appcache/'))});
 
-  app.get('/admin/45.*.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js'))});
-  
+  // app.get('/admin/45.*.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js'))});
+
+  app.get('admin/:file', (req, res, next) =>  {
+    let file = req.params.file;
+    console.log(file);
+    res.sendFile(path.resolve(outputPath, file));
+  });
   // app.get('/admin/appcache/manifest.html', (req, res) => {res.send('hello')});
 
   const port = 62102;
