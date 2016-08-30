@@ -8,7 +8,7 @@ const compression = require('compression');
 const publicPath = '/';
 const outputPath = path.resolve(process.cwd(), 'build');
 // const productionOutput = 'http://thesportsmatrix.com/admin/';
-const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/build/';
+const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/build';
 
 
   // compression middleware compresses your server responses which makes them
@@ -28,4 +28,5 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
     }
     console.log(`listening on port ${port}`);
     console.log(outputPath);
+    console.log(productionOutput);
   });
