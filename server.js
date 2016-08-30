@@ -31,4 +31,5 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
     console.log(`listening on port ${port}`);
     console.log(outputPath);
     console.log(productionOutput);
+    console.log(path.resolve(outputPath, 'main.41f0d908d2ed1f2b550c.js'));
   });
