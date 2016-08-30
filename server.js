@@ -26,6 +26,11 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.get('/admin/appcache/manifest.appcache', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.appcache/'))});
 
   // app.get('/admin/45.*.chunk.js', (req, res) => {res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js'))});
+  app.get('/admin/build/:file', (req, res, next) {
+    let file = req.params.file;
+    let filePath = path.resolve(outputPath, file);
+    res.sendFile(path.resolve(outputPath, filePath));
+  });
 
   app.get('/admin/:file', (req, res, next) =>  {
     let file = req.params.file;
