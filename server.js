@@ -18,7 +18,7 @@ const productionOutput = 'https://misc-rnnukmcdu8mee.netdna-ssl.com/tsm/admin/bu
   app.use(publicPath, express.static(productionOutput));
 
   app.get('*', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
-  app.get('/45.60ec5b75f07a1656e681.chunk.js', (req, res) => res.sendFile(path.resolve(outputPath, '45.60ec5b75f07a1656e681.chunk.js')));
+  app.get('/main.ce8ca11f34f701ba0079.js', (req, res) => res.sendFile(path.resolve(outputPath, 'main.ce8ca11f34f701ba0079.js')));
 
   const port = 62102;
 
