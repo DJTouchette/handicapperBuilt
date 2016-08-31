@@ -14,26 +14,26 @@ const outputPath = path.resolve(process.cwd(), 'build');
   app.use(compression());
   app.use(publicPath, express.static(outputPath));
 
-  app.get('/admin/', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
-  app.get('/admin/appcache/manifest.html', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.html'))});
-  app.get('/admin/appcache/manifest.appcache', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.appcache/'))});
+  app.get('/handicapper/', (req, res) => res.sendFile(path.resolve(outputPath, 'index.html')));
+  app.get('/handicapper/appcache/manifest.html', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.html'))});
+  app.get('/handicapper/appcache/manifest.appcache', (req, res) => {res.sendFile(path.resolve(outputPath, 'appcache/manifest.appcache/'))});
 
-  app.get('/admin/build/:file', (req, res, next) => {
+  app.get('/handicapper/build/:file', (req, res, next) => {
     let file = req.params.file;
     let filePath = path.resolve(outputPath, file);
     res.sendFile(path.resolve(outputPath, filePath));
   });
 
-  app.get('/admin/:file', (req, res, next) =>  {
+  app.get('/handicapper/:file', (req, res, next) =>  {
     let file = req.params.file;
     let filePath = path.resolve(outputPath, file);
     if (file === '/login') {
-      res.sendFile()
+      res.sendFile();
     }
     res.sendFile(path.resolve(outputPath, 'index.html'));
     return;
   });
-  
+
   const port = 62102;
 
   app.listen(port, (err) => {
